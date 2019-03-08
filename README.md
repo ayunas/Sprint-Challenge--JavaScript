@@ -29,14 +29,26 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+    .forEach is an array method that carries out a function on each element, on the current array its applied on.  .map carries out a function on every element in the specified array, but it returns a new array and doesn't modify the existing array.  
 
 2. What is the difference between a function and a method?
+    methods are simply functions that are declared inside of objects.  
 
 3. What is closure?
+    closure is a concept in javascript that allows nested functions to access variables outside of it's function scope inside the parent function or even from the global context.  It is allowed to provide functions the ability to behave the way they were intended.  
 
 4. Describe the four rules of the 'this' keyword.
+    This has different meanings in different contexts.  the meanings pertain to what is known as the 'binding' of the THIS keyword.  There are 4 major bindings possible for THIS:
+    
+    1. Default or Window Binding: when you do a console.log(this), the default behavior is that this is pointing to the global object, which is the global context.
+    2. Implicit or Automatic Binding: when you declare THIS in an object, this refers to the object it's contained in automatically.
+    3. Explicit Binding: when you use a function method to explicitly bind the THIS keyword to a specific object.  for example:  myFunction.bind(object_name);  this would bind the this keyword to that specific object inside of the function.  If you declared the this keyword inside a function, by default, it will point to the global or window context.  
+    4. New Binding, using the new keyword: when using a constructor function, the new keyword that was used to create an object becomes what THIS refers to.  
+    
 
 5. Why do we need super() in an extended class?
+
+    with the super() we put it into a constructor function, so we are able to access the parent class's properties and methods.  we pass into super as an argument all of the properties of the child so the parent understands that the child has those specific properties.  
 
 ## Project Set up
 

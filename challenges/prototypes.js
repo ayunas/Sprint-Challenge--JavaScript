@@ -1,5 +1,7 @@
 /* ===== Prototype Practice ===== */
 
+console.log('Currently, I am not able to write out the syntax using the classical prototypes and constructor functions because I was not able to grasp the concept or the syntax.  I understood the concept and syntax for classes so I completed this task using classes in the classes.js file. I plan on using outside resources to learn more about constructor functions and prototypes and the this keyword. I hope to do the project for Javscript III and submit it hopefully.');
+
 // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge.
 
 /* == Step 1: Base Constructor ==
