@@ -146,6 +146,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+
+zooAnimals.forEach( (animal,i) => lowerCase.push(zooAnimals[i].animal_name.toLowerCase()));
+
+console.log('\n The zoo animals\' names all lowercased: ');
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -153,8 +157,14 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
-console.log(largerPopulation);
+
+const smallerPopulation = zooAnimals.filter((animal,i) => zooAnimals[i].population < 5);
+const smallerNames = smallerPopulation.map( (animal,i) => (`${smallerPopulation[i].animal_name}, Population: ${smallerPopulation[i].population}`));
+
+console.log('\n An array of the zoo animals that have a population less than 5: ');
+console.log(smallerNames);
+
+
 
 /* Request 4: .reduce() 
 
