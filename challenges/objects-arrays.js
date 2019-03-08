@@ -13,8 +13,10 @@ const tyrannosaurus = {
     diet: 'carnivorous',
     weight: '7000kg',
     length: '12m',
-    period: 'Late Cretaceious'
+    period: 'Late Cretaceious',
+    roar: function() {return 'RAWERSRARARWERSARARARRRR!'}
 };
+// Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 
 
 
@@ -53,8 +55,7 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
-
+console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
 
@@ -145,9 +146,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+//zooAnimals.forEach( (animal,i) => lowerCase.push(zooAnimals[i].animal_name.toLowerCase()));
 
-zooAnimals.forEach( (animal,i) => lowerCase.push(zooAnimals[i].animal_name.toLowerCase()));
+const lowerCase = zooAnimals.map( (animal,i) => animal.animal_name.toLowerCase() );
 
 console.log('\n The zoo animals\' names all lowercased: ');
 console.log(lowerCase); 
@@ -158,11 +159,12 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 
-const smallerPopulation = zooAnimals.filter((animal,i) => zooAnimals[i].population < 5);
-const smallerNames = smallerPopulation.map( (animal,i) => (`${smallerPopulation[i].animal_name}, Population: ${smallerPopulation[i].population}`));
+const smallerPopulation = zooAnimals.filter((animal,i) => zooAnimals[i].population < 5).map( (animal,i) => (`${animal.animal_name}, Population: ${animal.population}`));
+
+//const smallerNames = smallerPopulation.map( (animal,i) => (`${smallerPopulation[i].animal_name}, Population: ${smallerPopulation[i].population}`));
 
 console.log('\n An array of the zoo animals that have a population less than 5: \n');
-console.log(smallerNames);
+console.log(smallerPopulation);
 
 
 
